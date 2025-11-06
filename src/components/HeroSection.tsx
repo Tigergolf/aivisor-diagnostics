@@ -16,8 +16,8 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
           alt="Professional using mobile technology" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
-        <div className="absolute inset-0 bg-brand-navy/20"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
+        <div className="absolute inset-0 bg-brand-navy/10"></div>
       </div>
 
       {/* Content */}
