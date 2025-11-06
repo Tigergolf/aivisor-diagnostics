@@ -1,13 +1,31 @@
-import { Check } from "lucide-react";
+import { Target, Clock, MapPin, Wrench, DollarSign, Shield } from "lucide-react";
 
 export const ValueSection = () => {
   const benefits = [
-    "Identification of 5-10 automatable processes",
-    "Estimate of monthly hours recoverable",
-    "Prioritized implementation roadmap",
-    "Specific tool recommendations",
-    "Cost-benefit analysis for each opportunity",
-    "Risk assessment and mitigation strategies",
+    {
+      text: "Identification of 5-10 automatable processes",
+      icon: Target,
+    },
+    {
+      text: "Estimate of monthly hours recoverable",
+      icon: Clock,
+    },
+    {
+      text: "Prioritized implementation roadmap",
+      icon: MapPin,
+    },
+    {
+      text: "Specific tool recommendations",
+      icon: Wrench,
+    },
+    {
+      text: "Cost-benefit analysis for each opportunity",
+      icon: DollarSign,
+    },
+    {
+      text: "Risk assessment and mitigation strategies",
+      icon: Shield,
+    },
   ];
 
   return (
@@ -24,22 +42,25 @@ export const ValueSection = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="flex items-start space-x-4 bg-card p-6 rounded-lg shadow-card fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
-                    <Check className="w-4 h-4 text-primary-foreground" />
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <div 
+                  key={index}
+                  className="flex items-start space-x-4 bg-card p-6 rounded-lg shadow-card fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                      <IconComponent className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                    </div>
                   </div>
+                  <p className="text-card-foreground font-medium">
+                    {benefit.text}
+                  </p>
                 </div>
-                <p className="text-card-foreground font-medium">
-                  {benefit}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
