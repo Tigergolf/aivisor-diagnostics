@@ -1,21 +1,25 @@
-import iconTime from "@/assets/icon-time.png";
-import iconErrors from "@/assets/icon-errors.png";
-import iconBilling from "@/assets/icon-billing.png";
+import { Clock, AlertCircle, DollarSign } from "lucide-react";
 
 export const ProblemSection = () => {
   const problems = [
     {
-      icon: iconTime,
+      icon: Clock,
+      bgColor: "bg-brand-blue/10",
+      iconColor: "text-brand-blue",
       title: "30% of time spent on admin tasks",
       description: "Your skilled professionals waste valuable billable hours on repetitive administrative work",
     },
     {
-      icon: iconErrors,
+      icon: AlertCircle,
+      bgColor: "bg-brand-medium-navy/10",
+      iconColor: "text-brand-medium-navy",
       title: "Manual processes that create errors",
       description: "Human error in data entry and document processing leads to costly mistakes and rework",
     },
     {
-      icon: iconBilling,
+      icon: DollarSign,
+      bgColor: "bg-brand-navy/10",
+      iconColor: "text-brand-navy",
       title: "Lost billing opportunities",
       description: "Time tracking gaps and administrative overhead reduce your firm's revenue potential",
     },
@@ -34,23 +38,26 @@ export const ProblemSection = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {problems.map((problem, index) => (
-            <div 
-              key={index}
-              className="bg-card p-8 rounded-lg shadow-card hover:shadow-elevated transition-shadow duration-300 fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="w-20 h-20 mb-6 mx-auto">
-                <img src={problem.icon} alt="" className="w-full h-full object-contain" />
+          {problems.map((problem, index) => {
+            const IconComponent = problem.icon;
+            return (
+              <div 
+                key={index}
+                className="bg-card p-8 rounded-lg shadow-card hover:shadow-elevated transition-shadow duration-300 fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className={`w-20 h-20 mb-6 mx-auto flex items-center justify-center rounded-full ${problem.bgColor}`}>
+                  <IconComponent className={`w-10 h-10 ${problem.iconColor}`} strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center text-card-foreground">
+                  {problem.title}
+                </h3>
+                <p className="text-muted-foreground text-center">
+                  {problem.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-center text-card-foreground">
-                {problem.title}
-              </h3>
-              <p className="text-muted-foreground text-center">
-                {problem.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
