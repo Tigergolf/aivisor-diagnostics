@@ -48,7 +48,7 @@ export const ProcessSection = () => {
                 className="relative fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="text-6xl font-bold text-brand-blue/20 mb-2">
+                <div className="text-6xl font-bold text-white mb-2">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-brand-navy">
