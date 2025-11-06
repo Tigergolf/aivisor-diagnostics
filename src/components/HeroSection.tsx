@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
-import logo from "@/assets/aivisors-logo.png";
+import logoWhite from "@/assets/aivisors-logo-white.png";
 
 interface HeroSectionProps {
   onCtaClick: () => void;
@@ -23,7 +23,7 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-12">
-          <img src={logo} alt="AIVisors" className="h-10 md:h-12" />
+          <img src={logoWhite} alt="AIVisors" className="h-10 md:h-12" />
         </div>
         
         <div className="max-w-3xl">
