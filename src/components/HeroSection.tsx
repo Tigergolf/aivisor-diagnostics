@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-illustration.jpg";
+import heroImage from "@/assets/hero-image.jpg";
 import logo from "@/assets/aivisors-logo.png";
 
 interface HeroSectionProps {
@@ -36,10 +36,11 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             </p>
           </div>
           
-          <div className="fade-in lg:block hidden">
+          <div className="fade-in lg:block hidden relative">
+            <div className="absolute inset-0 bg-brand-navy/15 rounded-lg z-10"></div>
             <img 
               src={heroImage} 
-              alt="Professional efficiency illustration" 
+              alt="Professional using mobile technology" 
               className="rounded-lg shadow-elevated w-full"
             />
           </div>
