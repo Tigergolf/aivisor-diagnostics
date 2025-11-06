@@ -8,13 +8,25 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero py-20 md:py-32">
-      <div className="container mx-auto px-4">
+    <section className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroImage} 
+          alt="Professional using mobile technology" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+        <div className="absolute inset-0 bg-brand-navy/20"></div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="mb-12">
           <img src={logo} alt="AIVisors" className="h-10 md:h-12" />
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-3xl">
           <div className="text-white space-y-6 fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               How Many Billable Hours Are You Losing to Admin Tasks?
@@ -34,15 +46,6 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             <p className="text-sm text-white/80">
               For consulting, accounting, and legal services firms
             </p>
-          </div>
-          
-          <div className="fade-in lg:block hidden relative">
-            <div className="absolute inset-0 bg-brand-navy/15 rounded-lg z-10"></div>
-            <img 
-              src={heroImage} 
-              alt="Professional using mobile technology" 
-              className="rounded-lg shadow-elevated w-full"
-            />
           </div>
         </div>
       </div>
