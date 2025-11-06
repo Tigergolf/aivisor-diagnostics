@@ -14,7 +14,7 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <img 
           src={heroImage} 
           alt="Professional using mobile technology" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[30%_center] md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
         <div className="absolute inset-0 bg-brand-navy/10"></div>
