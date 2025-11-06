@@ -23,7 +23,7 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="mb-12">
-          <img src={logoWhite} alt="AIVisors" className="h-10 md:h-12" />
+          <img src={logoWhite} alt="AIVisors" className="h-12 md:h-16" />
         </div>
         
         <div className="max-w-3xl">
