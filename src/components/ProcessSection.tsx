@@ -1,4 +1,4 @@
-import processTimeline from "@/assets/process-timeline.png";
+
 
 export const ProcessSection = () => {
   const steps = [
@@ -29,14 +29,6 @@ export const ProcessSection = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get actionable insights in just 48 hours
           </p>
-        </div>
-        
-        <div className="max-w-5xl mx-auto mb-12">
-          <img 
-            src={processTimeline} 
-            alt="Process timeline" 
-            className="w-full h-auto"
-          />
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
