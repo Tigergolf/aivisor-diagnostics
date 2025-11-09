@@ -9,10 +9,10 @@ export const SocialProofSection = () => {
             <Users className="w-8 h-8" />
           </div>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Join the First 50 Firms to Receive Their Diagnostic
+            Join the first 10 firms in our curated pilot program
           </h2>
           <p className="text-lg text-primary-foreground/90">
-            Limited spots available for our comprehensive AI implementation diagnostic
+            Limited spots available—matched with 20 certified advisors
           </p>
         </div>
       </div>

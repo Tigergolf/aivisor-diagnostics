@@ -3,28 +3,20 @@ import { Target, Clock, MapPin, Wrench, DollarSign, Shield } from "lucide-react"
 export const ValueSection = () => {
   const benefits = [
     {
-      text: "Identification of 5-10 automatable processes",
-      icon: Target,
-    },
-    {
-      text: "Estimate of monthly hours recoverable",
+      text: "10-minute discovery to identify opportunities",
       icon: Clock,
     },
     {
-      text: "Prioritized implementation roadmap",
-      icon: MapPin,
+      text: "Instant match with the right AI expert for your firm",
+      icon: Target,
     },
     {
-      text: "Specific tool recommendations",
+      text: "Ready-to-run automation packs (not just recommendations)",
       icon: Wrench,
     },
     {
-      text: "Cost-benefit analysis for each opportunity",
+      text: "60-day ROI tracking to prove results",
       icon: DollarSign,
-    },
-    {
-      text: "Risk assessment and mitigation strategies",
-      icon: Shield,
     },
   ];
 
@@ -34,10 +26,10 @@ export const ValueSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What You Get
+              What You Get:
             </h2>
-            <p className="text-xl text-primary font-semibold">
-              All FREE for waitlist members
+            <p className="text-xl text-muted-foreground">
+              All included with platform access
             </p>
           </div>
           

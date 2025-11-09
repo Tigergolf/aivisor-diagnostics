@@ -29,10 +29,10 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <div className="max-w-3xl">
           <div className="text-white space-y-6 fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              How Many Billable Hours Are You Losing to Admin Tasks?
+              Discover Where AI Can Save You Time or Money—In 10 Minutes
             </h1>
             <p className="text-xl md:text-2xl text-white/90">
-              Discover what AI can do for your firm in 48 hours. Free diagnostic.
+              Match instantly with certified AI advisors and ready-to-run automation packs. Built for professional services firms.
             </p>
             <div className="pt-4">
               <Button 
@@ -40,7 +40,7 @@ export const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
                 size="lg" 
                 className="bg-white text-brand-navy hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold"
               >
-                Request Free Diagnostic
+                Start Your Discovery
               </Button>
             </div>
             <p className="text-sm text-white/80">

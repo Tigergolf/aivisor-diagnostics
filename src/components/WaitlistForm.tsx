@@ -13,7 +13,7 @@ const waitlistSchema = z.object({
   sector: z.enum(["consulting", "accounting", "legal", "other"], {
     required_error: "Please select a sector",
   }),
-  employeeCount: z.enum(["50-100", "100-250", "250-500", "500+"], {
+  employeeCount: z.enum(["10-50", "50-100", "100-250", "250+"], {
     required_error: "Please select employee count",
   }),
 });
@@ -46,8 +46,8 @@ export const WaitlistForm = ({ variant = "default" }: WaitlistFormProps) => {
       
       setIsSubmitted(true);
       toast({
-        title: "You're on the list!",
-        description: "We'll be in touch within 48 hours to schedule your free diagnostic.",
+        title: "Application received!",
+        description: "We'll contact you within 48 hours with next steps.",
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -77,9 +77,9 @@ export const WaitlistForm = ({ variant = "default" }: WaitlistFormProps) => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+        <h3 className="text-2xl font-bold mb-2">Application Received!</h3>
         <p className="text-muted-foreground">
-          Check your email for confirmation. We'll reach out within 48 hours to schedule your free diagnostic.
+          We'll contact you within 48 hours with next steps.
         </p>
       </div>
     );
@@ -150,10 +150,10 @@ export const WaitlistForm = ({ variant = "default" }: WaitlistFormProps) => {
               <SelectValue placeholder="Select employee count" />
             </SelectTrigger>
             <SelectContent>
+              <SelectItem value="10-50">10-50</SelectItem>
               <SelectItem value="50-100">50-100</SelectItem>
               <SelectItem value="100-250">100-250</SelectItem>
-              <SelectItem value="250-500">250-500</SelectItem>
-              <SelectItem value="500+">500+</SelectItem>
+              <SelectItem value="250+">250+</SelectItem>
             </SelectContent>
           </Select>
           {errors.employeeCount && <p className="text-sm text-destructive mt-1">{errors.employeeCount}</p>}
@@ -161,11 +161,11 @@ export const WaitlistForm = ({ variant = "default" }: WaitlistFormProps) => {
       </div>
 
       <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-        {isSubmitting ? "Joining..." : "Join the Waitlist"}
+        {isSubmitting ? "Requesting..." : "Request Pilot Access"}
       </Button>
 
       <p className="text-xs text-muted-foreground text-center">
-        By submitting, you agree to receive communications from AIVisors. We respect your privacy and will never share your information.
+        Your data is secure. We use read-only connections and encryption.
       </p>
     </form>
   );

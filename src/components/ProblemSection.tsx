@@ -6,22 +6,22 @@ export const ProblemSection = () => {
       icon: Clock,
       bgColor: "bg-brand-blue/10",
       iconColor: "text-brand-blue",
-      title: "30% of time spent on admin tasks",
-      description: "Your skilled professionals waste valuable billable hours on repetitive administrative work",
+      title: "Billable hours lost to admin tasks",
+      description: "Your skilled professionals waste valuable time on repetitive work instead of serving clients",
     },
     {
       icon: AlertCircle,
       bgColor: "bg-brand-medium-navy/10",
       iconColor: "text-brand-medium-navy",
-      title: "Manual processes that create errors",
-      description: "Human error in data entry and document processing leads to costly mistakes and rework",
+      title: "Manual processes creating bottlenecks",
+      description: "Inefficient workflows slow down your operations and reduce team productivity",
     },
     {
       icon: DollarSign,
       bgColor: "bg-brand-navy/10",
       iconColor: "text-brand-navy",
-      title: "Lost billing opportunities",
-      description: "Time tracking gaps and administrative overhead reduce your firm's revenue potential",
+      title: "AI confusion—too many tools, no clear path",
+      description: "Overwhelming options and unclear ROI make it difficult to know where to start",
     },
   ];
 
