@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/advisor-hero-image.jpg";
 import logoWhite from "@/assets/aivisors-logo-white.png";
 
 interface AdvisorHeroSectionProps {
